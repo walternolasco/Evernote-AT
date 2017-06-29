@@ -5,8 +5,10 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import java.net.MalformedURLException;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 import org.junit.Assert;
 import org.openqa.selenium.By;
@@ -29,46 +31,49 @@ public class Logout {
         wait = new FluentWait<WebDriver>(driver).withTimeout(20, TimeUnit.SECONDS).pollingEvery(5, TimeUnit.SECONDS).ignoring(NoSuchElementException.class);
     }
 
-    @Given("^A ([^\"]*) username$")
-    public void A_something_username(String arg2) {
-        if (firstTime) {
-            driver.findElementById("com.evernote:id/already_have_account_sign_in").click();
-            firstTime = false;
-        }
-        
-        WebElement emailField = driver.findElementById("com.evernote:id/landing_username");
-        //emailField.clear();
-        if (arg2.equals("valid")) {
-            emailField.sendKeys("walternolak@gmail.com");
-        } else if (arg2.equals("invalid")) {
-            emailField.sendKeys("a@a.a");
-        }
+    @Given("^a user already logged in$")
+    public void user_logged_in() {
+
     }
 
-    @And("^A ([^\"]*) password$")
-    public void A_something_password(String arg3) {
-        WebElement passField = driver.findElementById("com.evernote:id/landing_login_password");
-        //passField.clear();
-        if (arg3.equals("valid")) {
-            passField.sendKeys("Password123");
-            driver.hideKeyboard();
-        } else if (arg3.equals("invalid")) {
-            passField.sendKeys("meow");
-        }
+    @When("^I go to settings$")
+    public void I_go_to_settings() {
+        //Locator settings Home PAge
+        driver.findElementById("com.evernote:id/overflow_icon").click();
+
+        //Locator de Ajustes menu
+        driver.findElement(By.xpath("//android.widget.TextView[(@resource-id='com.evernote:id/title') and (@text='Ajustes')]")).click();
     }
 
-    @When("^I submit the credentials$")
-    public void I_submit_the_credentials() {
-        driver.findElementById("com.evernote:id/landing_sign_in_button").click();
+    @And("^go to account information$")
+    public void I_go_to_account(String arg3) {
+        //Locator de account info menu
+        driver.findElement(By.xpath("//android.widget.TextView[(@resource-id='com.evernote:id/title') and (@text='Información de la cuenta')]")).click();
+
     }
 
-    @Then("^I ([^\"]*) login")
-    public void I_something_login(String arg4) {
-        if (arg4.equals("cannot")) {
-            Assert.assertEquals(true, driver.findElementById("com.evernote:id/alertTitle").isDisplayed());
-            driver.findElementById("android:id/button1").click();
-        } else {
-            Assert.assertEquals(true, driver.findElementById("com.evernote:id/main_fab_image_view").isDisplayed());
+    @And("^tap the logout button$")
+    public void logout_button(String arg3) {
+        List<MobileElement> elements = driver.findElements(By.id("android:id/title"));
+        try {
+            while (true) {
+                for (MobileElement element : elements) {
+                    if (element.getText().equals("Cerrar sesión")) {
+                        element.click();
+                        break;
+                    }
+                }
+                driver.swipe(500, 1900, 500, 200, 5000);
+            }
+        } catch (Throwable t) {
+
         }
+
+    }
+
+    @Then("^I can logout of the app")
+    public void I_logout(String arg4) {
+        //Confirm logout
+        driver.findElementById("android:id/button1").click();
     }
 }

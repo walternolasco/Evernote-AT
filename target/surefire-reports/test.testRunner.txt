@@ -1,4 +1,184 @@
 -------------------------------------------------------------------------------
 Test set: test.testRunner
 -------------------------------------------------------------------------------
-Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 68.415 sec
+Tests run: 16, Failures: 0, Errors: 6, Skipped: 9, Time elapsed: 82.962 sec <<< FAILURE!
+Given A invalid username(| Unsuccessful | invalid | invalid | cannot |)  Time elapsed: 0.009 sec  <<< ERROR!
+org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 20.11 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'DESKTOP-JK77KIE', ip: '192.168.52.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=com.evernote, deviceScreenSize=1440x2560, networkConnectionEnabled=true, warnings={}, databaseEnabled=false, deviceName=ce0716079d5e2a1905, platform=LINUX, deviceUDID=ce0716079d5e2a1905, appActivity=com.evernote.ui.HomeActivity, desired={appActivity=com.evernote.ui.HomeActivity, appPackage=com.evernote, platformVersion=7.0, platformName=Android, deviceName=ce0716079d5e2a1905}, platformVersion=7.0, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=SM-G930F, platformName=Android, deviceManufacturer=samsung}]
+Session ID: 6ee6f887-fe9e-4a6a-83fb-4c8a626984b2
+*** Element info: {Using=id, value=com.evernote:id/already_have_account_sign_in}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:453)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:70)
+	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
+	at test.scripts.Login.A_something_username(Login.java:35)
+	at ?.Given A invalid username(01Login.feature:5)
+| Unsuccessful | invalid | invalid | cannot |  Time elapsed: 0.011 sec  <<< ERROR!
+org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 20.11 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'DESKTOP-JK77KIE', ip: '192.168.52.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=com.evernote, deviceScreenSize=1440x2560, networkConnectionEnabled=true, warnings={}, databaseEnabled=false, deviceName=ce0716079d5e2a1905, platform=LINUX, deviceUDID=ce0716079d5e2a1905, appActivity=com.evernote.ui.HomeActivity, desired={appActivity=com.evernote.ui.HomeActivity, appPackage=com.evernote, platformVersion=7.0, platformName=Android, deviceName=ce0716079d5e2a1905}, platformVersion=7.0, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=SM-G930F, platformName=Android, deviceManufacturer=samsung}]
+Session ID: 6ee6f887-fe9e-4a6a-83fb-4c8a626984b2
+*** Element info: {Using=id, value=com.evernote:id/already_have_account_sign_in}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:453)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:70)
+	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
+	at test.scripts.Login.A_something_username(Login.java:35)
+	at ?.Given A invalid username(01Login.feature:5)
+Given A valid username(| Successful | valid | valid | can |)  Time elapsed: 0.004 sec  <<< ERROR!
+org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 20.30 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'DESKTOP-JK77KIE', ip: '192.168.52.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=com.evernote, deviceScreenSize=1440x2560, networkConnectionEnabled=true, warnings={}, databaseEnabled=false, deviceName=ce0716079d5e2a1905, platform=LINUX, deviceUDID=ce0716079d5e2a1905, appActivity=com.evernote.ui.HomeActivity, desired={appActivity=com.evernote.ui.HomeActivity, appPackage=com.evernote, platformVersion=7.0, platformName=Android, deviceName=ce0716079d5e2a1905}, platformVersion=7.0, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=SM-G930F, platformName=Android, deviceManufacturer=samsung}]
+Session ID: 6ee6f887-fe9e-4a6a-83fb-4c8a626984b2
+*** Element info: {Using=id, value=com.evernote:id/already_have_account_sign_in}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:453)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:70)
+	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
+	at test.scripts.Login.A_something_username(Login.java:35)
+	at ?.Given A valid username(01Login.feature:5)
+| Successful | valid | valid | can |  Time elapsed: 0.006 sec  <<< ERROR!
+org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 20.30 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'DESKTOP-JK77KIE', ip: '192.168.52.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=com.evernote, deviceScreenSize=1440x2560, networkConnectionEnabled=true, warnings={}, databaseEnabled=false, deviceName=ce0716079d5e2a1905, platform=LINUX, deviceUDID=ce0716079d5e2a1905, appActivity=com.evernote.ui.HomeActivity, desired={appActivity=com.evernote.ui.HomeActivity, appPackage=com.evernote, platformVersion=7.0, platformName=Android, deviceName=ce0716079d5e2a1905}, platformVersion=7.0, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=SM-G930F, platformName=Android, deviceManufacturer=samsung}]
+Session ID: 6ee6f887-fe9e-4a6a-83fb-4c8a626984b2
+*** Element info: {Using=id, value=com.evernote:id/already_have_account_sign_in}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:453)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:70)
+	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
+	at test.scripts.Login.A_something_username(Login.java:35)
+	at ?.Given A valid username(01Login.feature:5)
+When I go to settings(Scenario: logout)  Time elapsed: 0.002 sec  <<< ERROR!
+org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 20.05 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'DESKTOP-JK77KIE', ip: '192.168.52.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=com.evernote, deviceScreenSize=1440x2560, networkConnectionEnabled=true, warnings={}, databaseEnabled=false, deviceName=ce0716079d5e2a1905, platform=LINUX, deviceUDID=ce0716079d5e2a1905, appActivity=com.evernote.ui.HomeActivity, desired={appActivity=com.evernote.ui.HomeActivity, appPackage=com.evernote, platformVersion=7.0, platformName=Android, deviceName=ce0716079d5e2a1905}, platformVersion=7.0, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=SM-G930F, platformName=Android, deviceManufacturer=samsung}]
+Session ID: 6ee6f887-fe9e-4a6a-83fb-4c8a626984b2
+*** Element info: {Using=id, value=com.evernote:id/overflow_icon}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:453)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:70)
+	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
+	at test.scripts.Logout.I_go_to_settings(Logout.java:42)
+	at ?.When I go to settings(02Logout.feature:6)
+Scenario: logout  Time elapsed: 0.005 sec  <<< ERROR!
+org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 20.05 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'DESKTOP-JK77KIE', ip: '192.168.52.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=com.evernote, deviceScreenSize=1440x2560, networkConnectionEnabled=true, warnings={}, databaseEnabled=false, deviceName=ce0716079d5e2a1905, platform=LINUX, deviceUDID=ce0716079d5e2a1905, appActivity=com.evernote.ui.HomeActivity, desired={appActivity=com.evernote.ui.HomeActivity, appPackage=com.evernote, platformVersion=7.0, platformName=Android, deviceName=ce0716079d5e2a1905}, platformVersion=7.0, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=SM-G930F, platformName=Android, deviceManufacturer=samsung}]
+Session ID: 6ee6f887-fe9e-4a6a-83fb-4c8a626984b2
+*** Element info: {Using=id, value=com.evernote:id/overflow_icon}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:453)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:70)
+	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
+	at test.scripts.Logout.I_go_to_settings(Logout.java:42)
+	at ?.When I go to settings(02Logout.feature:6)
