@@ -1,0 +1,12 @@
+#surefire
+#Tue Jun 06 20:27:51 CST 2017
+jpda.address=54465
+maven.ext.class.path=C\:\\Users\\elco45\\AppData\\Roaming\\NetBeans\\8.0.2\\maven-nblib\\netbeans-eventspy.jar
+file.encoding=UTF-8
+jpda.listen=true
+forkMode=once
+user.dir=C\:\\Users\\elco45\\Desktop\\xoeyeTestAndroid
+localRepository=C\:\\Users\\elco45\\.m2\\repository
+test=test.testRunner
+basedir=C\:\\Users\\elco45\\Desktop\\xoeyeTestAndroid
+maven.surefire.debug=-Xdebug -Xrunjdwp\:transport\=dt_socket,server\=n,address\=54465

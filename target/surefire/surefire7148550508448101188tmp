@@ -1,0 +1,8 @@
+#surefire
+#Wed Jun 07 11:19:31 CST 2017
+maven.ext.class.path=C\:\\Users\\elco45\\AppData\\Roaming\\NetBeans\\8.0.2\\maven-nblib\\netbeans-eventspy.jar
+user.dir=C\:\\Users\\elco45\\Desktop\\xoeyeTestAndroid
+file.encoding=UTF-8
+localRepository=C\:\\Users\\elco45\\.m2\\repository
+basedir=C\:\\Users\\elco45\\Desktop\\xoeyeTestAndroid
+test=test.testRunner
