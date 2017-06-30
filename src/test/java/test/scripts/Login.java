@@ -23,7 +23,6 @@ public class Login {
     private AndroidDriver driver;
     private Wait<WebDriver> wait;
     private static Boolean invalidEmail = true;
-    //private WebElement emailField;
 
     @Before
     public void startApp() throws MalformedURLException {
@@ -34,7 +33,6 @@ public class Login {
 
     @Given("^A ([^\"]*) username$")
     public void A_something_username(String arg2) throws InterruptedException {
-        //WebElement emailField = driver.findElementById("com.evernote:id/landing_email");
         WebElement emailField = driver.findElement(By.id("com.evernote:id/landing_email"));
         if (arg2.equals("valid")) {
             emailField.sendKeys("walternolak@gmail.com");
@@ -48,7 +46,6 @@ public class Login {
     public void A_something_password(String arg3) {
         if (!invalidEmail) {
             WebElement passField = driver.findElementById("com.evernote:id/landing_login_password");
-            //passField.clear();
             if (arg3.equals("valid")) {
                 passField.sendKeys("Password123");
                 driver.hideKeyboard();
@@ -69,18 +66,12 @@ public class Login {
 
     @Then("^I ([^\"]*) login")
     public void I_something_login(String arg4) {
-        if (!invalidEmail) {
-            if (arg4.equals("cannot")) {
-                Assert.assertEquals(true, driver.findElementById("com.evernote:id/alertTitle").isDisplayed());
-                driver.findElementById("android:id/button1").click();
-            } else {
-                Assert.assertEquals(true, driver.findElementById("com.evernote:id/main_fab_image_view").isDisplayed());
-            }
-        } else {
-            invalidEmail = true;
+        if (arg4.equals("cannot")) {
+            invalidEmail = false;
             Assert.assertEquals(true, driver.findElementById("com.evernote:id/alertTitle").isDisplayed());
             driver.findElementById("android:id/button1").click();
+        } else {
+            Assert.assertEquals(true, driver.findElementById("com.evernote:id/main_fab_image_view").isDisplayed());
         }
-
     }
 }

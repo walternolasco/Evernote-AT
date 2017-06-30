@@ -42,23 +42,23 @@ public class Logout {
         driver.findElementById("com.evernote:id/overflow_icon").click();
 
         //Locator de Ajustes menu
-        driver.findElement(By.xpath("//android.widget.TextView[(@resource-id='com.evernote:id/title') and (@text='Ajustes')]")).click();
+        driver.findElement(By.xpath("//android.widget.TextView[(@resource-id='com.evernote:id/title') and (@text='Settings')]")).click();
     }
 
     @And("^go to account information$")
-    public void I_go_to_account(String arg3) {
+    public void I_go_to_account() {
         //Locator de account info menu
-        driver.findElement(By.xpath("//android.widget.TextView[(@resource-id='com.evernote:id/title') and (@text='Información de la cuenta')]")).click();
+        driver.findElement(By.xpath("//android.widget.TextView[(@resource-id='com.evernote:id/title') and (@text='Account Info')]")).click();
 
     }
 
-    @And("^tap the logout button$")
-    public void logout_button(String arg3) {
+    @And("^tap logout")
+    public void logout_button() {
         List<MobileElement> elements = driver.findElements(By.id("android:id/title"));
         try {
             while (true) {
                 for (MobileElement element : elements) {
-                    if (element.getText().equals("Cerrar sesión")) {
+                    if (element.getText().equals("Sign Out")) {
                         element.click();
                         break;
                     }
@@ -66,13 +66,12 @@ public class Logout {
                 driver.swipe(500, 1900, 500, 200, 5000);
             }
         } catch (Throwable t) {
-
         }
 
     }
 
-    @Then("^I can logout of the app")
-    public void I_logout(String arg4) {
+    @Then("^I can logout successfully")
+    public void I_logout() {
         //Confirm logout
         driver.findElementById("android:id/button1").click();
     }
