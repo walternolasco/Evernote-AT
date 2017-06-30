@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="16" failures="0" name="test.testRunner" time="82.966" errors="6" skipped="9">
+<testsuite tests="16" failures="0" name="test.testRunner" time="150.882" errors="4" skipped="6">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_131\jre\bin"/>
@@ -35,6 +35,8 @@
     <property name="java.class.version" value="52.0"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="os.version" value="10.0"/>
+    <property name="jpda.listen" value="true"/>
+    <property name="jpda.address" value="52438"/>
     <property name="user.home" value="C:\Users\Walter"/>
     <property name="user.timezone" value="America/Regina"/>
     <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
@@ -42,10 +44,11 @@
     <property name="file.encoding" value="UTF-8"/>
     <property name="user.name" value="Walter"/>
     <property name="java.class.path" value="C:\Program Files\NetBeans 8.2\java\maven\boot\plexus-classworlds-2.4.jar"/>
+    <property name="maven.surefire.debug" value="-Xdebug -Xrunjdwp:transport=dt_socket,server=n,address=52438"/>
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_131\jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dtest=test.testRunner -Dmaven.ext.class.path=C:\Program Files\NetBeans 8.2\java\maven-nblib\netbeans-eventspy.jar -Dfile.encoding=UTF-8 surefire:test"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dtest=test.testRunner -DforkMode=once -Dmaven.surefire.debug=-Xdebug -Xrunjdwp:transport=dt_socket,server=n,address=52438 -Djpda.listen=true -Djpda.address=52438 -Dmaven.ext.class.path=C:\Program Files\NetBeans 8.2\java\maven-nblib\netbeans-eventspy.jar -Dfile.encoding=UTF-8 surefire:test"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="en"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -57,29 +60,35 @@
     <property name="maven.home" value="C:\Program Files\NetBeans 8.2\java\maven"/>
     <property name="file.separator" value="\"/>
     <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="forkMode" value="once"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="| Unsuccessful | invalid | invalid | cannot |" name="Given A invalid username" time="0.009">
+  <testcase classname="| Unsuccessful | invalid | invalid | cannot |" name="Given A invalid username" time="0.016"/>
+  <testcase classname="| Unsuccessful | invalid | invalid | cannot |" name="And A invalid password" time="0"/>
+  <testcase classname="| Unsuccessful | invalid | invalid | cannot |" name="When I submit the credentials" time="0"/>
+  <testcase classname="| Unsuccessful | invalid | invalid | cannot |" name="Then I cannot login" time="0"/>
+  <testcase classname="| Unsuccessful | invalid | invalid | cannot |" name="| Unsuccessful | invalid | invalid | cannot |" time="0"/>
+  <testcase classname="| Successful | valid | valid | can |" name="Given A valid username" time="0.018">
     <error message="An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 20.11 seconds
+Command duration or timeout: 27.35 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
 System info: host: &apos;DESKTOP-JK77KIE&apos;, ip: &apos;192.168.52.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities [{appPackage=com.evernote, deviceScreenSize=1440x2560, networkConnectionEnabled=true, warnings={}, databaseEnabled=false, deviceName=ce0716079d5e2a1905, platform=LINUX, deviceUDID=ce0716079d5e2a1905, appActivity=com.evernote.ui.HomeActivity, desired={appActivity=com.evernote.ui.HomeActivity, appPackage=com.evernote, platformVersion=7.0, platformName=Android, deviceName=ce0716079d5e2a1905}, platformVersion=7.0, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=SM-G930F, platformName=Android, deviceManufacturer=samsung}]
-Session ID: 6ee6f887-fe9e-4a6a-83fb-4c8a626984b2
-*** Element info: {Using=id, value=com.evernote:id/already_have_account_sign_in}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 20.11 seconds
+Capabilities [{app=C:\Users\Walter\Desktop\Mocha + Cucumber\Evernote\Backup\evernoteTest/src/main/resources/Evernote.apk, appPackage=com.evernote, deviceScreenSize=1440x2560, networkConnectionEnabled=true, warnings={}, appWaitPackage=com.evernote, appWaitActivity=com.evernote.ui.HomeActivity, databaseEnabled=false, deviceName=ce0716079d5e2a1905, platform=LINUX, deviceUDID=ce0716079d5e2a1905, appActivity=com.evernote.ui.HomeActivity, desired={app=C:\Users\Walter\Desktop\Mocha + Cucumber\Evernote\Backup\evernoteTest/src/main/resources/Evernote.apk, platformVersion=7.0, platformName=Android, deviceName=ce0716079d5e2a1905}, platformVersion=7.0, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=SM-G930F, platformName=Android, deviceManufacturer=samsung}]
+Session ID: 6da1a7de-4f04-44ce-a062-97f97d5b2299
+*** Element info: {Using=id, value=com.evernote:id/landing_email}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 27.35 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
 System info: host: &apos;DESKTOP-JK77KIE&apos;, ip: &apos;192.168.52.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities [{appPackage=com.evernote, deviceScreenSize=1440x2560, networkConnectionEnabled=true, warnings={}, databaseEnabled=false, deviceName=ce0716079d5e2a1905, platform=LINUX, deviceUDID=ce0716079d5e2a1905, appActivity=com.evernote.ui.HomeActivity, desired={appActivity=com.evernote.ui.HomeActivity, appPackage=com.evernote, platformVersion=7.0, platformName=Android, deviceName=ce0716079d5e2a1905}, platformVersion=7.0, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=SM-G930F, platformName=Android, deviceManufacturer=samsung}]
-Session ID: 6ee6f887-fe9e-4a6a-83fb-4c8a626984b2
-*** Element info: {Using=id, value=com.evernote:id/already_have_account_sign_in}
+Capabilities [{app=C:\Users\Walter\Desktop\Mocha + Cucumber\Evernote\Backup\evernoteTest/src/main/resources/Evernote.apk, appPackage=com.evernote, deviceScreenSize=1440x2560, networkConnectionEnabled=true, warnings={}, appWaitPackage=com.evernote, appWaitActivity=com.evernote.ui.HomeActivity, databaseEnabled=false, deviceName=ce0716079d5e2a1905, platform=LINUX, deviceUDID=ce0716079d5e2a1905, appActivity=com.evernote.ui.HomeActivity, desired={app=C:\Users\Walter\Desktop\Mocha + Cucumber\Evernote\Backup\evernoteTest/src/main/resources/Evernote.apk, platformVersion=7.0, platformName=Android, deviceName=ce0716079d5e2a1905}, platformVersion=7.0, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=SM-G930F, platformName=Android, deviceManufacturer=samsung}]
+Session ID: 6da1a7de-4f04-44ce-a062-97f97d5b2299
+*** Element info: {Using=id, value=com.evernote:id/landing_email}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -98,168 +107,41 @@ Session ID: 6ee6f887-fe9e-4a6a-83fb-4c8a626984b2
 	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:70)
 	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
 	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
-	at test.scripts.Login.A_something_username(Login.java:35)
-	at ✽.Given A invalid username(01Login.feature:5)
-</error>
-    <system-out>[ADB] Cannot read version codes of C:\Users\Walter\AppData\Roaming\npm\node_modules\appium\node_modules\io.appium.settings\app\build\outputs\apk\settings_apk-debug.apk and/or io.appium.settings. Assuming correct app version is already installed
-[AndroidDriver] No app sent in, not parsing package/activity
-@Login
-Feature: Login
-
-  Scenario Outline: &lt;arg1&gt; login  &amp;#27;[90m# 01Login.feature:4&amp;#27;[0m
-    &amp;#27;[36mGiven &amp;#27;[0m&amp;#27;[36mA &lt;arg2&gt; username&amp;#27;[0m
-    &amp;#27;[36mAnd &amp;#27;[0m&amp;#27;[36mA &lt;arg3&gt; password&amp;#27;[0m
-    &amp;#27;[36mWhen &amp;#27;[0m&amp;#27;[36mI submit the credentials&amp;#27;[0m
-    &amp;#27;[36mThen &amp;#27;[0m&amp;#27;[36mI &lt;arg4&gt; login&amp;#27;[0m
-
-    Examples: 
-</system-out>
-  </testcase>
-  <testcase classname="| Unsuccessful | invalid | invalid | cannot |" name="| Unsuccessful | invalid | invalid | cannot |" time="0.011">
-    <error message="An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 20.11 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
-System info: host: &apos;DESKTOP-JK77KIE&apos;, ip: &apos;192.168.52.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities [{appPackage=com.evernote, deviceScreenSize=1440x2560, networkConnectionEnabled=true, warnings={}, databaseEnabled=false, deviceName=ce0716079d5e2a1905, platform=LINUX, deviceUDID=ce0716079d5e2a1905, appActivity=com.evernote.ui.HomeActivity, desired={appActivity=com.evernote.ui.HomeActivity, appPackage=com.evernote, platformVersion=7.0, platformName=Android, deviceName=ce0716079d5e2a1905}, platformVersion=7.0, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=SM-G930F, platformName=Android, deviceManufacturer=samsung}]
-Session ID: 6ee6f887-fe9e-4a6a-83fb-4c8a626984b2
-*** Element info: {Using=id, value=com.evernote:id/already_have_account_sign_in}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 20.11 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
-System info: host: &apos;DESKTOP-JK77KIE&apos;, ip: &apos;192.168.52.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities [{appPackage=com.evernote, deviceScreenSize=1440x2560, networkConnectionEnabled=true, warnings={}, databaseEnabled=false, deviceName=ce0716079d5e2a1905, platform=LINUX, deviceUDID=ce0716079d5e2a1905, appActivity=com.evernote.ui.HomeActivity, desired={appActivity=com.evernote.ui.HomeActivity, appPackage=com.evernote, platformVersion=7.0, platformName=Android, deviceName=ce0716079d5e2a1905}, platformVersion=7.0, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=SM-G930F, platformName=Android, deviceManufacturer=samsung}]
-Session ID: 6ee6f887-fe9e-4a6a-83fb-4c8a626984b2
-*** Element info: {Using=id, value=com.evernote:id/already_have_account_sign_in}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
+	at org.openqa.selenium.By$ById.findElement(By.java:218)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
 	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
 	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:453)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:70)
-	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
-	at test.scripts.Login.A_something_username(Login.java:35)
-	at ✽.Given A invalid username(01Login.feature:5)
-</error>
-  </testcase>
-  <testcase classname="| Unsuccessful | invalid | invalid | cannot |" name="And A invalid password" time="0.011">
-    <skipped/>
-  </testcase>
-  <testcase classname="| Unsuccessful | invalid | invalid | cannot |" name="When I submit the credentials" time="0.011">
-    <skipped/>
-  </testcase>
-  <testcase classname="| Unsuccessful | invalid | invalid | cannot |" name="Then I cannot login" time="0.011">
-    <skipped/>
-  </testcase>
-  <testcase classname="| Successful | valid | valid | can |" name="Given A valid username" time="0.004">
-    <error message="An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 20.30 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
-System info: host: &apos;DESKTOP-JK77KIE&apos;, ip: &apos;192.168.52.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities [{appPackage=com.evernote, deviceScreenSize=1440x2560, networkConnectionEnabled=true, warnings={}, databaseEnabled=false, deviceName=ce0716079d5e2a1905, platform=LINUX, deviceUDID=ce0716079d5e2a1905, appActivity=com.evernote.ui.HomeActivity, desired={appActivity=com.evernote.ui.HomeActivity, appPackage=com.evernote, platformVersion=7.0, platformName=Android, deviceName=ce0716079d5e2a1905}, platformVersion=7.0, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=SM-G930F, platformName=Android, deviceManufacturer=samsung}]
-Session ID: 6ee6f887-fe9e-4a6a-83fb-4c8a626984b2
-*** Element info: {Using=id, value=com.evernote:id/already_have_account_sign_in}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 20.30 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
-System info: host: &apos;DESKTOP-JK77KIE&apos;, ip: &apos;192.168.52.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities [{appPackage=com.evernote, deviceScreenSize=1440x2560, networkConnectionEnabled=true, warnings={}, databaseEnabled=false, deviceName=ce0716079d5e2a1905, platform=LINUX, deviceUDID=ce0716079d5e2a1905, appActivity=com.evernote.ui.HomeActivity, desired={appActivity=com.evernote.ui.HomeActivity, appPackage=com.evernote, platformVersion=7.0, platformName=Android, deviceName=ce0716079d5e2a1905}, platformVersion=7.0, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=SM-G930F, platformName=Android, deviceManufacturer=samsung}]
-Session ID: 6ee6f887-fe9e-4a6a-83fb-4c8a626984b2
-*** Element info: {Using=id, value=com.evernote:id/already_have_account_sign_in}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:453)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:70)
-	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
-	at test.scripts.Login.A_something_username(Login.java:35)
+	at test.scripts.Login.A_something_username(Login.java:38)
 	at ✽.Given A valid username(01Login.feature:5)
 </error>
     <system-out>
   @Login
   Scenario Outline: Unsuccessful login &amp;#27;[90m# 01Login.feature:13&amp;#27;[0m
-    &amp;#27;[31mGiven &amp;#27;[0m&amp;#27;[31mA &amp;#27;[0m&amp;#27;[31m&amp;#27;[1minvalid&amp;#27;[0m&amp;#27;[31m username&amp;#27;[0m           &amp;#27;[90m# Login.A_something_username(String)&amp;#27;[0m
-      &amp;#27;[31morg.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-      Command duration or timeout: 20.11 seconds
-      For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-      Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
-      System info: host: &apos;DESKTOP-JK77KIE&apos;, ip: &apos;192.168.52.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;
-      Driver info: io.appium.java_client.android.AndroidDriver
-      Capabilities [{appPackage=com.evernote, deviceScreenSize=1440x2560, networkConnectionEnabled=true, warnings={}, databaseEnabled=false, deviceName=ce0716079d5e2a1905, platform=LINUX, deviceUDID=ce0716079d5e2a1905, appActivity=com.evernote.ui.HomeActivity, desired={appActivity=com.evernote.ui.HomeActivity, appPackage=com.evernote, platformVersion=7.0, platformName=Android, deviceName=ce0716079d5e2a1905}, platformVersion=7.0, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=SM-G930F, platformName=Android, deviceManufacturer=samsung}]
-      Session ID: 6ee6f887-fe9e-4a6a-83fb-4c8a626984b2
-      *** Element info: {Using=id, value=com.evernote:id/already_have_account_sign_in}
-      	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-      	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-      	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-      	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-      	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
-      	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
-      	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
-      	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
-      	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-      	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-      	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
-      	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
-      	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-      	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-      	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:453)
-      	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:70)
-      	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
-      	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
-      	at test.scripts.Login.A_something_username(Login.java:35)
-      	at ?.Given A invalid username(01Login.feature:5)
-      &amp;#27;[0m
-    &amp;#27;[36mAnd &amp;#27;[0m&amp;#27;[36mA &amp;#27;[0m&amp;#27;[36m&amp;#27;[1minvalid&amp;#27;[0m&amp;#27;[36m password&amp;#27;[0m             &amp;#27;[90m# Login.A_something_password(String)&amp;#27;[0m
-    &amp;#27;[36mWhen &amp;#27;[0m&amp;#27;[36mI submit the credentials&amp;#27;[0m      &amp;#27;[90m# Login.I_submit_the_credentials()&amp;#27;[0m
-    &amp;#27;[36mThen &amp;#27;[0m&amp;#27;[36mI &amp;#27;[0m&amp;#27;[36m&amp;#27;[1mcannot&amp;#27;[0m&amp;#27;[36m login&amp;#27;[0m                &amp;#27;[90m# Login.I_something_login(String)&amp;#27;[0m
+    &amp;#27;[32mGiven &amp;#27;[0m&amp;#27;[32mA &amp;#27;[0m&amp;#27;[32m&amp;#27;[1minvalid&amp;#27;[0m&amp;#27;[32m username&amp;#27;[0m           &amp;#27;[90m# Login.A_something_username(String)&amp;#27;[0m
+    &amp;#27;[32mAnd &amp;#27;[0m&amp;#27;[32mA &amp;#27;[0m&amp;#27;[32m&amp;#27;[1minvalid&amp;#27;[0m&amp;#27;[32m password&amp;#27;[0m             &amp;#27;[90m# Login.A_something_password(String)&amp;#27;[0m
+    &amp;#27;[32mWhen &amp;#27;[0m&amp;#27;[32mI submit the credentials&amp;#27;[0m      &amp;#27;[90m# Login.I_submit_the_credentials()&amp;#27;[0m
+    &amp;#27;[32mThen &amp;#27;[0m&amp;#27;[32mI &amp;#27;[0m&amp;#27;[32m&amp;#27;[1mcannot&amp;#27;[0m&amp;#27;[32m login&amp;#27;[0m                &amp;#27;[90m# Login.I_something_login(String)&amp;#27;[0m
 </system-out>
   </testcase>
-  <testcase classname="| Successful | valid | valid | can |" name="| Successful | valid | valid | can |" time="0.006">
+  <testcase classname="| Successful | valid | valid | can |" name="| Successful | valid | valid | can |" time="0.018">
     <error message="An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 20.30 seconds
+Command duration or timeout: 27.35 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
 System info: host: &apos;DESKTOP-JK77KIE&apos;, ip: &apos;192.168.52.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities [{appPackage=com.evernote, deviceScreenSize=1440x2560, networkConnectionEnabled=true, warnings={}, databaseEnabled=false, deviceName=ce0716079d5e2a1905, platform=LINUX, deviceUDID=ce0716079d5e2a1905, appActivity=com.evernote.ui.HomeActivity, desired={appActivity=com.evernote.ui.HomeActivity, appPackage=com.evernote, platformVersion=7.0, platformName=Android, deviceName=ce0716079d5e2a1905}, platformVersion=7.0, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=SM-G930F, platformName=Android, deviceManufacturer=samsung}]
-Session ID: 6ee6f887-fe9e-4a6a-83fb-4c8a626984b2
-*** Element info: {Using=id, value=com.evernote:id/already_have_account_sign_in}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 20.30 seconds
+Capabilities [{app=C:\Users\Walter\Desktop\Mocha + Cucumber\Evernote\Backup\evernoteTest/src/main/resources/Evernote.apk, appPackage=com.evernote, deviceScreenSize=1440x2560, networkConnectionEnabled=true, warnings={}, appWaitPackage=com.evernote, appWaitActivity=com.evernote.ui.HomeActivity, databaseEnabled=false, deviceName=ce0716079d5e2a1905, platform=LINUX, deviceUDID=ce0716079d5e2a1905, appActivity=com.evernote.ui.HomeActivity, desired={app=C:\Users\Walter\Desktop\Mocha + Cucumber\Evernote\Backup\evernoteTest/src/main/resources/Evernote.apk, platformVersion=7.0, platformName=Android, deviceName=ce0716079d5e2a1905}, platformVersion=7.0, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=SM-G930F, platformName=Android, deviceManufacturer=samsung}]
+Session ID: 6da1a7de-4f04-44ce-a062-97f97d5b2299
+*** Element info: {Using=id, value=com.evernote:id/landing_email}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 27.35 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
 System info: host: &apos;DESKTOP-JK77KIE&apos;, ip: &apos;192.168.52.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities [{appPackage=com.evernote, deviceScreenSize=1440x2560, networkConnectionEnabled=true, warnings={}, databaseEnabled=false, deviceName=ce0716079d5e2a1905, platform=LINUX, deviceUDID=ce0716079d5e2a1905, appActivity=com.evernote.ui.HomeActivity, desired={appActivity=com.evernote.ui.HomeActivity, appPackage=com.evernote, platformVersion=7.0, platformName=Android, deviceName=ce0716079d5e2a1905}, platformVersion=7.0, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=SM-G930F, platformName=Android, deviceManufacturer=samsung}]
-Session ID: 6ee6f887-fe9e-4a6a-83fb-4c8a626984b2
-*** Element info: {Using=id, value=com.evernote:id/already_have_account_sign_in}
+Capabilities [{app=C:\Users\Walter\Desktop\Mocha + Cucumber\Evernote\Backup\evernoteTest/src/main/resources/Evernote.apk, appPackage=com.evernote, deviceScreenSize=1440x2560, networkConnectionEnabled=true, warnings={}, appWaitPackage=com.evernote, appWaitActivity=com.evernote.ui.HomeActivity, databaseEnabled=false, deviceName=ce0716079d5e2a1905, platform=LINUX, deviceUDID=ce0716079d5e2a1905, appActivity=com.evernote.ui.HomeActivity, desired={app=C:\Users\Walter\Desktop\Mocha + Cucumber\Evernote\Backup\evernoteTest/src/main/resources/Evernote.apk, platformVersion=7.0, platformName=Android, deviceName=ce0716079d5e2a1905}, platformVersion=7.0, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=SM-G930F, platformName=Android, deviceManufacturer=samsung}]
+Session ID: 6da1a7de-4f04-44ce-a062-97f97d5b2299
+*** Element info: {Using=id, value=com.evernote:id/landing_email}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -278,37 +160,42 @@ Session ID: 6ee6f887-fe9e-4a6a-83fb-4c8a626984b2
 	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:70)
 	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
 	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
-	at test.scripts.Login.A_something_username(Login.java:35)
+	at org.openqa.selenium.By$ById.findElement(By.java:218)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at test.scripts.Login.A_something_username(Login.java:38)
 	at ✽.Given A valid username(01Login.feature:5)
 </error>
   </testcase>
-  <testcase classname="| Successful | valid | valid | can |" name="And A valid password" time="0.007">
+  <testcase classname="| Successful | valid | valid | can |" name="And A valid password" time="0.034">
     <skipped/>
   </testcase>
-  <testcase classname="| Successful | valid | valid | can |" name="When I submit the credentials" time="0.007">
+  <testcase classname="| Successful | valid | valid | can |" name="When I submit the credentials" time="0.034">
     <skipped/>
   </testcase>
-  <testcase classname="| Successful | valid | valid | can |" name="Then I can login" time="0.008">
+  <testcase classname="| Successful | valid | valid | can |" name="Then I can login" time="0.034">
     <skipped/>
   </testcase>
-  <testcase classname="Scenario: logout" name="Given a user already logged in" time="0.005"/>
-  <testcase classname="Scenario: logout" name="When I go to settings" time="0.003">
+  <testcase classname="Scenario: logout" name="Given a user already logged in" time="0"/>
+  <testcase classname="Scenario: logout" name="When I go to settings" time="0.031">
     <error message="An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 20.05 seconds
+Command duration or timeout: 21.08 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
 System info: host: &apos;DESKTOP-JK77KIE&apos;, ip: &apos;192.168.52.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities [{appPackage=com.evernote, deviceScreenSize=1440x2560, networkConnectionEnabled=true, warnings={}, databaseEnabled=false, deviceName=ce0716079d5e2a1905, platform=LINUX, deviceUDID=ce0716079d5e2a1905, appActivity=com.evernote.ui.HomeActivity, desired={appActivity=com.evernote.ui.HomeActivity, appPackage=com.evernote, platformVersion=7.0, platformName=Android, deviceName=ce0716079d5e2a1905}, platformVersion=7.0, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=SM-G930F, platformName=Android, deviceManufacturer=samsung}]
-Session ID: 6ee6f887-fe9e-4a6a-83fb-4c8a626984b2
+Capabilities [{app=C:\Users\Walter\Desktop\Mocha + Cucumber\Evernote\Backup\evernoteTest/src/main/resources/Evernote.apk, appPackage=com.evernote, deviceScreenSize=1440x2560, networkConnectionEnabled=true, warnings={}, appWaitPackage=com.evernote, appWaitActivity=com.evernote.ui.HomeActivity, databaseEnabled=false, deviceName=ce0716079d5e2a1905, platform=LINUX, deviceUDID=ce0716079d5e2a1905, appActivity=com.evernote.ui.HomeActivity, desired={app=C:\Users\Walter\Desktop\Mocha + Cucumber\Evernote\Backup\evernoteTest/src/main/resources/Evernote.apk, platformVersion=7.0, platformName=Android, deviceName=ce0716079d5e2a1905}, platformVersion=7.0, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=SM-G930F, platformName=Android, deviceManufacturer=samsung}]
+Session ID: 6da1a7de-4f04-44ce-a062-97f97d5b2299
 *** Element info: {Using=id, value=com.evernote:id/overflow_icon}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 20.05 seconds
+Command duration or timeout: 21.08 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
 System info: host: &apos;DESKTOP-JK77KIE&apos;, ip: &apos;192.168.52.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities [{appPackage=com.evernote, deviceScreenSize=1440x2560, networkConnectionEnabled=true, warnings={}, databaseEnabled=false, deviceName=ce0716079d5e2a1905, platform=LINUX, deviceUDID=ce0716079d5e2a1905, appActivity=com.evernote.ui.HomeActivity, desired={appActivity=com.evernote.ui.HomeActivity, appPackage=com.evernote, platformVersion=7.0, platformName=Android, deviceName=ce0716079d5e2a1905}, platformVersion=7.0, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=SM-G930F, platformName=Android, deviceManufacturer=samsung}]
-Session ID: 6ee6f887-fe9e-4a6a-83fb-4c8a626984b2
+Capabilities [{app=C:\Users\Walter\Desktop\Mocha + Cucumber\Evernote\Backup\evernoteTest/src/main/resources/Evernote.apk, appPackage=com.evernote, deviceScreenSize=1440x2560, networkConnectionEnabled=true, warnings={}, appWaitPackage=com.evernote, appWaitActivity=com.evernote.ui.HomeActivity, databaseEnabled=false, deviceName=ce0716079d5e2a1905, platform=LINUX, deviceUDID=ce0716079d5e2a1905, appActivity=com.evernote.ui.HomeActivity, desired={app=C:\Users\Walter\Desktop\Mocha + Cucumber\Evernote\Backup\evernoteTest/src/main/resources/Evernote.apk, platformVersion=7.0, platformName=Android, deviceName=ce0716079d5e2a1905}, platformVersion=7.0, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=SM-G930F, platformName=Android, deviceManufacturer=samsung}]
+Session ID: 6da1a7de-4f04-44ce-a062-97f97d5b2299
 *** Element info: {Using=id, value=com.evernote:id/overflow_icon}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -332,23 +219,23 @@ Session ID: 6ee6f887-fe9e-4a6a-83fb-4c8a626984b2
 	at ✽.When I go to settings(02Logout.feature:6)
 </error>
   </testcase>
-  <testcase classname="Scenario: logout" name="Scenario: logout" time="0.005">
+  <testcase classname="Scenario: logout" name="Scenario: logout" time="0.031">
     <error message="An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 20.05 seconds
+Command duration or timeout: 21.08 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
 System info: host: &apos;DESKTOP-JK77KIE&apos;, ip: &apos;192.168.52.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities [{appPackage=com.evernote, deviceScreenSize=1440x2560, networkConnectionEnabled=true, warnings={}, databaseEnabled=false, deviceName=ce0716079d5e2a1905, platform=LINUX, deviceUDID=ce0716079d5e2a1905, appActivity=com.evernote.ui.HomeActivity, desired={appActivity=com.evernote.ui.HomeActivity, appPackage=com.evernote, platformVersion=7.0, platformName=Android, deviceName=ce0716079d5e2a1905}, platformVersion=7.0, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=SM-G930F, platformName=Android, deviceManufacturer=samsung}]
-Session ID: 6ee6f887-fe9e-4a6a-83fb-4c8a626984b2
+Capabilities [{app=C:\Users\Walter\Desktop\Mocha + Cucumber\Evernote\Backup\evernoteTest/src/main/resources/Evernote.apk, appPackage=com.evernote, deviceScreenSize=1440x2560, networkConnectionEnabled=true, warnings={}, appWaitPackage=com.evernote, appWaitActivity=com.evernote.ui.HomeActivity, databaseEnabled=false, deviceName=ce0716079d5e2a1905, platform=LINUX, deviceUDID=ce0716079d5e2a1905, appActivity=com.evernote.ui.HomeActivity, desired={app=C:\Users\Walter\Desktop\Mocha + Cucumber\Evernote\Backup\evernoteTest/src/main/resources/Evernote.apk, platformVersion=7.0, platformName=Android, deviceName=ce0716079d5e2a1905}, platformVersion=7.0, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=SM-G930F, platformName=Android, deviceManufacturer=samsung}]
+Session ID: 6da1a7de-4f04-44ce-a062-97f97d5b2299
 *** Element info: {Using=id, value=com.evernote:id/overflow_icon}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 20.05 seconds
+Command duration or timeout: 21.08 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
 System info: host: &apos;DESKTOP-JK77KIE&apos;, ip: &apos;192.168.52.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities [{appPackage=com.evernote, deviceScreenSize=1440x2560, networkConnectionEnabled=true, warnings={}, databaseEnabled=false, deviceName=ce0716079d5e2a1905, platform=LINUX, deviceUDID=ce0716079d5e2a1905, appActivity=com.evernote.ui.HomeActivity, desired={appActivity=com.evernote.ui.HomeActivity, appPackage=com.evernote, platformVersion=7.0, platformName=Android, deviceName=ce0716079d5e2a1905}, platformVersion=7.0, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=SM-G930F, platformName=Android, deviceManufacturer=samsung}]
-Session ID: 6ee6f887-fe9e-4a6a-83fb-4c8a626984b2
+Capabilities [{app=C:\Users\Walter\Desktop\Mocha + Cucumber\Evernote\Backup\evernoteTest/src/main/resources/Evernote.apk, appPackage=com.evernote, deviceScreenSize=1440x2560, networkConnectionEnabled=true, warnings={}, appWaitPackage=com.evernote, appWaitActivity=com.evernote.ui.HomeActivity, databaseEnabled=false, deviceName=ce0716079d5e2a1905, platform=LINUX, deviceUDID=ce0716079d5e2a1905, appActivity=com.evernote.ui.HomeActivity, desired={app=C:\Users\Walter\Desktop\Mocha + Cucumber\Evernote\Backup\evernoteTest/src/main/resources/Evernote.apk, platformVersion=7.0, platformName=Android, deviceName=ce0716079d5e2a1905}, platformVersion=7.0, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=SM-G930F, platformName=Android, deviceManufacturer=samsung}]
+Session ID: 6da1a7de-4f04-44ce-a062-97f97d5b2299
 *** Element info: {Using=id, value=com.evernote:id/overflow_icon}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -372,13 +259,13 @@ Session ID: 6ee6f887-fe9e-4a6a-83fb-4c8a626984b2
 	at ✽.When I go to settings(02Logout.feature:6)
 </error>
   </testcase>
-  <testcase classname="Scenario: logout" name="And go to account information" time="0.006">
+  <testcase classname="Scenario: logout" name="And go to account information" time="0.031">
     <skipped/>
   </testcase>
-  <testcase classname="Scenario: logout" name="And tap logout" time="0.006">
+  <testcase classname="Scenario: logout" name="And tap logout" time="0.031">
     <skipped/>
   </testcase>
-  <testcase classname="Scenario: logout" name="Then I can logout successfully" time="0.006">
+  <testcase classname="Scenario: logout" name="Then I can logout successfully" time="0.031">
     <skipped/>
   </testcase>
 </testsuite>

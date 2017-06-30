@@ -1,0 +1,8 @@
+#surefire
+#Fri Jun 30 11:41:29 CST 2017
+maven.ext.class.path=C\:\\Program Files\\NetBeans 8.2\\java\\maven-nblib\\netbeans-eventspy.jar
+user.dir=C\:\\Users\\Walter\\Desktop\\Mocha + Cucumber\\Evernote\\Backup\\evernoteTest
+file.encoding=UTF-8
+localRepository=C\:\\Users\\Walter\\.m2\\repository
+basedir=C\:\\Users\\Walter\\Desktop\\Mocha + Cucumber\\Evernote\\Backup\\evernoteTest
+test=test.testRunner

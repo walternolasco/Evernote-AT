@@ -22,6 +22,7 @@ public class testRunner {
     public static AndroidDriver driver;
     private static final String serverAddress = "127.0.0.1";//Used for starting the appium server
     private static final int port = 4723;//Used for starting the appium server
+    public static boolean appInstalled = false;
 
     @BeforeClass
     public static void startApp() throws MalformedURLException {
@@ -30,12 +31,24 @@ public class testRunner {
         caps.setCapability("platformVersion", "7.0"); //Replace this with your Android version
         caps.setCapability("deviceName", "ce0716079d5e2a1905"); //Replace this with your simulator/device 
         //caps.setCapability("deviceName", "Samsung galaxy S7"); //Replace this with your simulator/device 
-        caps.setCapability("appActivity", "com.evernote.ui.HomeActivity");
-        caps.setCapability("appPackage", "com.evernote");
+        //caps.setCapability("locale", "en_US");
+        //caps.setCapability("language", "en");
         
-//        Path currentRelativePath = Paths.get("");
-//        String path = currentRelativePath.toAbsolutePath().toString() + "/src/main/resources/Evernote.apk";
-//        caps.setCapability("app", path); //Replace this with app path in your system
+        Path currentRelativePath = Paths.get("");
+        String path = currentRelativePath.toAbsolutePath().toString() + "/src/main/resources/Evernote.apk";
+        caps.setCapability("app", path); //Replace this with app path in your system
+        
+//        if (driver.isAppInstalled("com.evernote")) {
+//            caps.setCapability("appActivity", "com.evernote.ui.HomeActivity");
+//            caps.setCapability("appPackage", "com.evernote");
+//            appInstalled = true;
+//        }
+//        else
+//        {
+//            Path currentRelativePath = Paths.get("");
+//            String path = currentRelativePath.toAbsolutePath().toString() + "/src/main/resources/Evernote.apk";
+//            caps.setCapability("app", path); //Replace this with app path in your system
+//        }
         
         AppiumServer server = new AppiumServer(serverAddress,port);//setup Appium server 
         server.startAppiumServer();//open Appium server automatically
