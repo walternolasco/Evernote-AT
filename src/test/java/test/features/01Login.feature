@@ -1,4 +1,3 @@
-@Login
 Feature: Login
 
 Scenario Outline: <arg1> login
@@ -10,5 +9,5 @@ Then I <arg4> login
 
 Examples:
 |   arg1         |   arg2      |   arg3    |   arg4    |
-|   Unsuccessful   |   invalid     |   invalid   |   cannot     |
+|   Unsuccessful |   invalid   |   invalid |   cannot  |
 |   Successful   |   valid     |   valid   |   can     |
