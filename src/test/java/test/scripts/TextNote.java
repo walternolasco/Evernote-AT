@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package test.scripts;
 
 import cucumber.api.java.Before;
@@ -45,17 +40,20 @@ public class TextNote {
     }
 
     @When("^I ([^\"]*) a textnote$")
-    public void I_something_a_textnote(String arg) {
+    public void I_something_a_textnote(String arg) throws InterruptedException {
         if (arg.equals("create")) {
             driver.findElement(By.xpath("//android.widget.TextView[(@resource-id='com.evernote:id/msl_icon_tv') and (@text='A')]")).click();
             driver.findElement(By.xpath("//android.view.View[@resource-id='en-note']")).sendKeys("Hello world");
             driver.findElement(By.xpath("//android.widget.EditText[@resource-id='com.evernote:id/title']")).sendKeys("Meow");
             driver.findElement(By.xpath("//android.widget.ImageView[@resource-id='com.evernote:id/check_mark']")).click();
+            Thread.sleep(2000);
             driver.findElement(By.xpath("//android.widget.ImageView[@resource-id='com.evernote:id/check_mark']")).click();
         } else if (arg.equals("edit")) {
             driver.findElement(By.xpath("//android.widget.TextView[@text='e']")).click();
+            driver.findElement(By.xpath("//android.view.View[@resource-id='en-note']")).clear();
             driver.findElement(By.xpath("//android.view.View[@resource-id='en-note']")).sendKeys("Meow v2");
             driver.findElement(By.xpath("//android.widget.ImageView[@resource-id='com.evernote:id/check_mark']")).click();
+            Thread.sleep(2000);
             driver.findElement(By.xpath("//android.widget.ImageView[@resource-id='com.evernote:id/check_mark']")).click();
         } else if (arg.equals("delete")) {
             driver.findElement(By.xpath("//android.widget.ImageView[@resource-id='com.evernote:id/overflow_icon']")).click();
@@ -71,7 +69,7 @@ public class TextNote {
         } else if (arg.equals("edit")) {
             Assert.assertEquals(true, driver.findElement(By.xpath("//android.widget.TextView[(@resource-id='com.evernote:id/content') and contains(@text,'Meow v2')]")).isDisplayed());
         } else if (arg.equals("delete")) {
-            Assert.assertEquals(false, driver.findElements(By.id("android.widget.RelativeLayout")).size() == 1);
+            Assert.assertEquals(true, driver.findElements(By.id("com.evernote:id/content")).isEmpty());
         }
     }
 }
